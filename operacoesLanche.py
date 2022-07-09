@@ -134,8 +134,20 @@ def totalCompra(nomeLanche, quantidade):
         for(codigoLanche, nomeLanche, descricaoLanche, quantidadeLanche, valorLanche) in con:
             valor = valorLanche
             quantidadeBanco = quantidadeLanche
-        this.msg = ""
-        compra(nomeLanche, quantidadeBanco, quantidade)
+            this.msg = ""
+            compra(nomeLanche, quantidadeBanco, quantidade)
         return "O total da compra é: " + (valor*quantidade) + "O código do PIX é 12345678912, acesse https://www.picpay.com/site para efetuar pagamento."
     except Exception as erro:
-      print(erro)
+      return erro
+
+##def compraLanche(nomeLanche, quantidadeLanche, valorLanche):
+   # quantidadeLanche * valorLanche
+    #try:
+   #     sql = "select valorLanche * from lanche where nomeLanche = '{}'".format(nomeLanche)
+    #    con.execute(sql)
+
+     #   for(codigoLanche, nomeLanche, descricaoLanche, quantidadeLanche, valorLanche) in con:
+      #      this.msg = "Nome lanche: {}, Valor do lanche: {}".format(nomeLanche, valorLanche)
+
+    #except Exception as erro:
+      #  return erro
